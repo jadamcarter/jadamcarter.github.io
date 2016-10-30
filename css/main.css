@@ -15,7 +15,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #737CA1;
+    color: #504A4B;
 }
 a:hover {
     text-decoration: underline;
@@ -28,7 +28,7 @@ p {
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
     font-size: 1.2em;
     line-height: 1.2em;
-    color: #2C3539;
+    color: #504A4B;
 }
 footer {
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
