@@ -24,7 +24,8 @@ a:hover {
 h1 {
     font-size: 2.6em;
     font-family:'Alegreya SC', 'Alegreya SC', 'Alegreya SC';
-    color: #606060
+    color: #606060;
+    font-weight: normal
 }
 p {
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
