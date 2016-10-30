@@ -7,7 +7,7 @@ nav ul, footer ul {
     font-family: 'Alegreya SC', 'Alegreya SC', 'Alegreya SC';
     padding: 0px;
     list-style: none;
-    color: #2C3539;
+    color: #606060;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -28,7 +28,7 @@ p {
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
     font-size: 1.2em;
     line-height: 1.2em;
-    color: #2C3539;
+    color: #606060;
 }
 footer {
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
