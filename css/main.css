@@ -2,6 +2,7 @@ body {
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
     margin: 60px auto;
     width: 70%;
+    color: #606060
 }
 nav ul, footer ul {
     font-family: 'Alegreya SC', 'Alegreya SC', 'Alegreya SC';
@@ -23,6 +24,7 @@ a:hover {
 h1 {
     font-size: 2.8em;
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
+    color: #606060
 }
 p {
     font-family:'Alegreya', 'Alegreya', 'Alegreya';
