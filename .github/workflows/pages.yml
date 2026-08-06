@@ -1,0 +1,37 @@
+# Deploys the site to GitHub Pages — replacing the automatic workflow for ONE
+# reason: its deploy step has a fixed 10-minute timeout, and on 6 Aug 2026
+# GitHub's Pages backend slowed to the point where deployments were reaching
+# deployment_in_progress and then being CANCELLED by their own client at
+# 10:00 — four consecutive runs, three hours of "Run failed" emails, over a
+# six-line content change. Same build, same deploy, thirty-minute patience.
+name: Deploy site
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/configure-pages@v5
+      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/upload-pages-artifact@v3
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1800000
