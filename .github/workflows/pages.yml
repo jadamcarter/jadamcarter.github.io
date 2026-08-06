@@ -32,6 +32,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        # v5, not v4: v4 prints `timeout: 1800000` in its own config dump and then
+        # aborts at 605 seconds anyway — the input is accepted and ignored, which
+        # cost one more failed deploy on a day full of them.
+        uses: actions/deploy-pages@v5
         with:
           timeout: 1800000
